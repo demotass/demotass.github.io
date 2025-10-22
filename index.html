@@ -2,50 +2,47 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Demotass Dev — Apps</title>
+  <title>Demotass Dev — Portfolio</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Desarrollador independiente de apps móviles. Bienestar, motivación y productividad.">
+  <meta name="description" content="Portfolio y proyectos de Demotass Dev. Desarrollo de software, apps y herramientas digitales.">
   <link rel="icon" href="data:,">
   <style>
-    body{font:16px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial;color:#1f2937;margin:0;background:#f8fafc}
-    .wrap{max-width:880px;margin:0 auto;padding:48px 20px}
-    header{display:flex;align-items:center;gap:16px}
-    .badge{width:48px;height:48px;border-radius:12px;background:linear-gradient(180deg,#715CF0,#9970FF)}
-    h1{margin:0;font-size:28px}
-    .card{background:#fff;border-radius:16px;box-shadow:0 8px 30px rgba(17,24,39,.08);padding:20px;margin-top:24px}
-    a{color:#715CF0;text-decoration:none}
-    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-    footer{margin:32px 0;color:#6b7280}
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <div class="badge"></div>
-      <div>
-        <h1>Demotass Dev</h1>
-        <div>Apps de bienestar y motivación</div>
-      </div>
-    </header>
-
-    <section class="card">
-      <h2>Proyectos</h2>
-      <div class="grid">
-        <div class="card">
-          <strong>Frases de Serenidad</strong><br>
-          Motivación diaria y calma en tu móvil.<br>
-          <a href="https://demotass.github.io/frasesdeserenidad/">Página de la app</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Contacto</h2>
-      <p>Correo: <a href="mailto:demotass.dev@gmail.com">demotass.dev@gmail.com</a></p>
-    </section>
-
-    <footer>© <span id="y"></span> Demotass Dev</footer>
-  </div>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
-</body>
-</html>
+    :root {
+      --violet:#715CF0;
+      --light-bg:#f8fafc;
+      --dark-text:#1f2937;
+      --muted:#6b7280;
+    }
+    body {
+      font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--dark-text);
+      margin:0;
+      background:var(--light-bg);
+      line-height:1.6;
+    }
+    header {
+      background:linear-gradient(120deg,var(--violet),#9970FF);
+      color:#fff;
+      padding:64px 20px 80px;
+      text-align:center;
+    }
+    header h1 {font-size:40px;margin:0;}
+    header p {margin-top:8px;font-size:18px;color:rgba(255,255,255,.9);}
+    main {
+      max-width:880px;
+      margin:-60px auto 0;
+      background:#fff;
+      border-radius:24px;
+      box-shadow:0 10px 40px rgba(17,24,39,.1);
+      padding:40px 28px 64px;
+    }
+    section {margin-bottom:48px;}
+    h2 {color:var(--violet);margin-bottom:16px;}
+    .project {
+      border:1px solid #e5e7eb;
+      border-radius:16px;
+      padding:20px;
+      margin-bottom:16px;
+    }
+    .project h3 {margin:0 0 8px;font-size:20px;}
+    .project p {margin:0 0 12px;color:var(--mut
