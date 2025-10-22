@@ -1,61 +1,161 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Demotass Dev — Portfolio</title>
+  <title>Demotass Dev &mdash; Portfolio</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Professional portfolio of Demotass Dev. Software, app, and AI developer.">
+  <meta name="description" content="Professional portfolio of Demotass Dev. Software engineering, applied AI and digital products.">
   <link rel="icon" href="../favicon.png">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <header class="hero">
-    <div class="lang-switch"><a href="../">ES</a></div>
-    <div class="hero-content">
-      <h1>Demotass Dev</h1>
-      <p>Software developer — apps, AI, and digital solutions.</p>
+    <div class="hero-overlay"></div>
+    <div class="top-bar">
+      <div class="brand">Demotass Dev</div>
+      <div class="lang-switch"><a href="../">ES</a></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <span class="hero-eyebrow">Software engineering &amp; applied AI</span>
+        <h1>Digital solutions focused on data, automation, and polished experiences.</h1>
+        <p>I build end-to-end products: rapid prototypes, resilient backends, and launch-ready experiences for web and mobile.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="mailto:demotass.dev@gmail.com">Book a call</a>
+          <a class="btn ghost" href="#projects">See projects</a>
+        </div>
+        <ul class="hero-highlights">
+          <li>Production-ready prototypes in weeks</li>
+          <li>Automation pipelines with generative AI</li>
+          <li>Secure integrations with databases and APIs</li>
+        </ul>
+      </div>
+      <div class="hero-visual">
+        <img src="../header-bg.png" alt="Automation and dashboard workflows" loading="lazy">
+      </div>
     </div>
   </header>
 
   <main>
-    <section>
-      <h2>About me</h2>
-      <p>I’m an independent developer passionate about building useful, creative and meaningful tools. Experienced with <strong>Flutter</strong>, <strong>Python</strong>, and <strong>C#</strong>, I develop mobile apps, AI tools and full digital solutions.</p>
+    <section class="about">
+      <div class="section-header">
+        <h2>Where product thinking meets engineering</h2>
+        <p class="section-intro">I collaborate with teams to bring ideas into production with performance, scalability, and clean design in mind.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <figure class="feature-media">
+            <img src="../ChatGPT Image 23 oct 2025, 01_06_15.png" alt="Digital workflow planning" loading="lazy">
+          </figure>
+          <div class="feature-body">
+            <h3>End-to-end delivery</h3>
+            <p>From user flows to deployment. I ship frontends, backends, and infrastructure that work together from day one.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <figure class="feature-media">
+            <img src="../ChatGPT Image 23 oct 2025, 00_52_13.png" alt="Live data dashboards" loading="lazy">
+          </figure>
+          <div class="feature-body">
+            <h3>Data-first mindset</h3>
+            <p>Data modelling, live dashboards, and quality controls powered by SQL Server and the platforms you rely on.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <figure class="feature-media">
+            <img src="../ChatGPT Image 23 oct 2025, 01_10_30.png" alt="Design system with human focus" loading="lazy">
+          </figure>
+          <div class="feature-body">
+            <h3>Human-centered experiences</h3>
+            <p>Accessible interfaces, purposeful microcopy, and consistent experiences across channels.</p>
+          </div>
+        </div>
+      </div>
+      <div class="stack-pills">
+        <span class="pill">Python</span>
+        <span class="pill">Flutter</span>
+        <span class="pill">C#</span>
+        <span class="pill">SQL Server</span>
+        <span class="pill">Azure</span>
+        <span class="pill">AI Automation</span>
+      </div>
     </section>
 
-    <section>
-      <h2>Featured Projects</h2>
-
-      <div class="project">
-        <h3>Frases de Serenidad</h3>
-        <p>Motivational quotes app focused on calm and emotional wellness. Built with Flutter.</p>
-        <a class="btn" href="https://demotass.github.io/frasesdeserenidad/">View page</a>
+    <section class="projects" id="projects">
+      <div class="section-header">
+        <h2>Recent work</h2>
+        <p class="section-intro">Projects built around data, automation, and digital wellbeing. Each combines robust integrations with a refined UX.</p>
       </div>
+      <div class="project-grid">
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="../Frasesdeserenidad.jpg" alt="Frases de Serenidad interface" loading="lazy">
+          </figure>
+          <div class="project-content">
+            <h3>Frases de Serenidad</h3>
+            <p>Wellbeing app with motivational quotes, themed collections, and smooth animations crafted with Flutter.</p>
+            <ul class="project-tags">
+              <li>Flutter</li>
+              <li>Calm UX</li>
+              <li>Dynamic content</li>
+            </ul>
+            <div class="project-actions">
+              <a class="btn primary" href="https://demotass.github.io/frasesdeserenidad/" target="_blank" rel="noreferrer">View page</a>
+            </div>
+          </div>
+        </article>
 
-      <div class="project">
-        <h3>Bliss App</h3>
-        <p>Emotional support chat powered by AI, with breathing and relaxation guides.</p>
-        <a class="btn" href="#">More info</a>
-      </div>
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="../CheckCured.png" alt="CheckCured dashboard" loading="lazy">
+          </figure>
+          <div class="project-content">
+            <h3>CheckCured</h3>
+            <p>Python suite connected to SQL Server to capture clinical records, validate lab outcomes, and trigger quality alerts.</p>
+            <ul class="project-tags">
+              <li>Python</li>
+              <li>SQL Server</li>
+              <li>Live dashboards</li>
+            </ul>
+            <div class="project-actions">
+              <a class="btn ghost" href="mailto:demotass.dev@gmail.com">Request demo</a>
+            </div>
+          </div>
+        </article>
 
-      <div class="project">
-        <h3>Integralia Médica</h3>
-        <p>Integrative medicine website with e-commerce and appointment system built in WordPress.</p>
-        <a class="btn" href="#">View demo</a>
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="../CheckTestReport.png" alt="CheckTestReport verification flow" loading="lazy">
+          </figure>
+          <div class="project-content">
+            <h3>CheckTestReport</h3>
+            <p>Verification engine that reads PDF results, chains validations, and cross-checks reference databases for full traceability.</p>
+            <ul class="project-tags">
+              <li>Python</li>
+              <li>OCR</li>
+              <li>Automated QA</li>
+            </ul>
+            <div class="project-actions">
+              <a class="btn ghost" href="mailto:demotass.dev@gmail.com">Request demo</a>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>Let's collaborate! Find me on:</p>
-      <div class="links">
-        <a href="mailto:demotass.dev@gmail.com">Email</a> |
-        <a href="https://github.com/demotass">GitHub</a> 
+    <section class="cta">
+      <div class="cta-card">
+        <h2>Let&rsquo;s plan your next launch</h2>
+        <p>I bring clarity to roadmaps, deliver actionable prototypes, and stay close through deployment so value reaches your users.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="mailto:demotass.dev@gmail.com">Get in touch</a>
+          <a class="btn ghost" href="https://github.com/demotass" target="_blank" rel="noreferrer">View GitHub</a>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>© <span id="year"></span> Demotass Dev</footer>
+  <footer>&copy; <span id="year"></span> Demotass Dev</footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
