@@ -45,4 +45,78 @@
       margin-bottom:16px;
     }
     .project h3 {margin:0 0 8px;font-size:20px;}
-    .project p {margin:0 0 12px;color:var(--mut
+    .project p {margin:0 0 12px;color:var(--muted);}
+    a.btn {
+      display:inline-block;
+      background:var(--violet);
+      color:#fff;
+      padding:10px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:500;
+    }
+    .links a {
+      margin-right:12px;
+      color:var(--violet);
+      text-decoration:none;
+    }
+    footer {
+      text-align:center;
+      color:var(--muted);
+      margin:32px 0;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Demotass Dev</h1>
+    <p>Desarrollador de software — apps, IA, herramientas y experiencias digitales.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Sobre mí</h2>
+      <p>Apasionado por crear proyectos útiles, creativos y bien diseñados. Experiencia con Flutter, Python, C#, y desarrollo multiplataforma. 
+      Combino tecnología, diseño y funcionalidad para transformar ideas en productos reales.</p>
+    </section>
+
+    <section>
+      <h2>Proyectos</h2>
+
+      <div class="project">
+        <h3>Frases de Serenidad</h3>
+        <p>Aplicación móvil de frases motivacionales y bienestar personal. Disponible próximamente en Google Play.</p>
+        <a class="btn" href="https://demotass.github.io/frasesdeserenidad/">Ver página</a>
+      </div>
+
+      <div class="project">
+        <h3>Integralia Médica</h3>
+        <p>Web de medicina integrativa con tienda y sistema de citas. Proyecto desarrollado en WordPress y WooCommerce.</p>
+        <a class="btn" href="#">Ver demo</a>
+      </div>
+
+      <div class="project">
+        <h3>Bliss App</h3>
+        <p>Chat de apoyo emocional con IA y herramientas de respiración y relajación, creado con Flutter y backend propio.</p>
+        <a class="btn" href="#">Más información</a>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Contacto</h2>
+      <p>¿Colaboramos en algo? Puedes encontrarme en:</p>
+      <div class="links">
+        <a href="mailto:demotass.dev@gmail.com">Correo</a> |
+        <a href="https://github.com/demotass">GitHub</a> |
+        <a href="#">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Demotass Dev</footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
