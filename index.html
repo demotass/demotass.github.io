@@ -4,72 +4,15 @@
   <meta charset="utf-8">
   <title>Demotass Dev — Portfolio</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Portfolio y proyectos de Demotass Dev. Desarrollo de software, apps y herramientas digitales.">
-  <link rel="icon" href="data:,">
-  <style>
-    :root {
-      --violet:#715CF0;
-      --light-bg:#f8fafc;
-      --dark-text:#1f2937;
-      --muted:#6b7280;
-    }
-    body {
-      font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-      color:var(--dark-text);
-      margin:0;
-      background:var(--light-bg);
-      line-height:1.6;
-    }
-    header {
-      background:linear-gradient(120deg,var(--violet),#9970FF);
-      color:#fff;
-      padding:64px 20px 80px;
-      text-align:center;
-    }
-    header h1 {font-size:40px;margin:0;}
-    header p {margin-top:8px;font-size:18px;color:rgba(255,255,255,.9);}
-    main {
-      max-width:880px;
-      margin:-60px auto 0;
-      background:#fff;
-      border-radius:24px;
-      box-shadow:0 10px 40px rgba(17,24,39,.1);
-      padding:40px 28px 64px;
-    }
-    section {margin-bottom:48px;}
-    h2 {color:var(--violet);margin-bottom:16px;}
-    .project {
-      border:1px solid #e5e7eb;
-      border-radius:16px;
-      padding:20px;
-      margin-bottom:16px;
-    }
-    .project h3 {margin:0 0 8px;font-size:20px;}
-    .project p {margin:0 0 12px;color:var(--muted);}
-    a.btn {
-      display:inline-block;
-      background:var(--violet);
-      color:#fff;
-      padding:10px 16px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:500;
-    }
-    .links a {
-      margin-right:12px;
-      color:var(--violet);
-      text-decoration:none;
-    }
-    footer {
-      text-align:center;
-      color:var(--muted);
-      margin:32px 0;
-      font-size:14px;
-    }
-  </style>
+  <meta name="description" content="Portfolio profesional de Demotass Dev. Desarrollo de software, apps, IA y experiencias digitales.">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
+    <div class="lang">
+      <a href="./en/">EN</a>
+    </div>
     <h1>Demotass Dev</h1>
     <p>Desarrollador de software — apps, IA, herramientas y experiencias digitales.</p>
   </header>
@@ -77,7 +20,7 @@
   <main>
     <section>
       <h2>Sobre mí</h2>
-      <p>Apasionado por crear proyectos útiles, creativos y bien diseñados. Experiencia con Flutter, Python, C#, y desarrollo multiplataforma. 
+      <p>Apasionado por crear proyectos útiles, creativos y bien diseñados. Experiencia con Flutter, Python, C# y desarrollo multiplataforma. 
       Combino tecnología, diseño y funcionalidad para transformar ideas en productos reales.</p>
     </section>
 
@@ -86,19 +29,19 @@
 
       <div class="project">
         <h3>Frases de Serenidad</h3>
-        <p>Aplicación móvil de frases motivacionales y bienestar personal. Disponible próximamente en Google Play.</p>
+        <p>Aplicación móvil de frases motivacionales y bienestar personal.</p>
         <a class="btn" href="https://demotass.github.io/frasesdeserenidad/">Ver página</a>
       </div>
 
       <div class="project">
         <h3>Integralia Médica</h3>
-        <p>Web de medicina integrativa con tienda y sistema de citas. Proyecto desarrollado en WordPress y WooCommerce.</p>
+        <p>Web de medicina integrativa con tienda y sistema de citas. Desarrollada en WordPress.</p>
         <a class="btn" href="#">Ver demo</a>
       </div>
 
       <div class="project">
         <h3>Bliss App</h3>
-        <p>Chat de apoyo emocional con IA y herramientas de respiración y relajación, creado con Flutter y backend propio.</p>
+        <p>Chat de apoyo emocional con IA y herramientas de respiración, creado con Flutter y backend propio.</p>
         <a class="btn" href="#">Más información</a>
       </div>
 
@@ -106,17 +49,18 @@
 
     <section>
       <h2>Contacto</h2>
-      <p>¿Colaboramos en algo? Puedes encontrarme en:</p>
+      <p>Puedes encontrarme en:</p>
       <div class="links">
         <a href="mailto:demotass.dev@gmail.com">Correo</a> |
-        <a href="https://github.com/demotass">GitHub</a> |
-        <a href="#">LinkedIn</a>
+        <a href="https://github.com/demotass">GitHub</a> 
       </div>
     </section>
   </main>
 
   <footer>© <span id="year"></span> Demotass Dev</footer>
 
-  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
