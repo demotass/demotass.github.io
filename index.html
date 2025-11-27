@@ -13,6 +13,7 @@
     
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
 </head>
@@ -24,7 +25,7 @@
 </nav>
 <body>
     <div class="mode-toggle">
-        <span>VIEW_SOURCE: </span>
+        <label for="devModeToggle" class="toggle-label">VIEW_SOURCE: </label>
         <label class="switch">
             <input type="checkbox" id="devModeToggle">
             <span class="slider round"></span>
@@ -40,52 +41,81 @@
                 <span class="line-number">04</span> <span class="def">void</span> <span class="function">main</span>() {<br>
                 <span class="line-number">05</span> &nbsp;&nbsp;runApp(<span class="function">DemotassApp</span>());<br>
                 <span class="line-number">06</span> }<br>
-                <span class="line-number">07</span> <span class="comment">// Building logic...</span>
+                <span class="line-number">07</span> <span class="comment">// Compiling logic...</span>
             </div>
 
             <div id="hero-title" class="hidden">
                 <h1 class="glitch" data-text="DEMOTASS">DEMOTASS</h1>
-                <p class="subtitle">Lógica Python. Experiencia Nativa.</p>
+                <p class="subtitle">Eficiencia algorítmica. Belleza multiplataforma.</p>
                 <a href="#contact" class="cta-button">def start_project():</a>
             </div>
         </div>
     </header>
+
     <section id="about" class="about-section">
+        
         <div class="bio-container">
             <h2 class="section-title"><span class="class-def">class</span> Demotass(<span class="parent-class">FullStackDev</span>):</h2>
             
             <div class="bio-grid">
                 <div class="bio-text">
-                    <p class="docstring">"""<br>Eficiencia algorítmica. Belleza multiplataforma.<br>La robustez de Python en el servidor y la versatilidad de Flutter en la pantalla.<br>"""</p>
-                    <p>
-                        <span class="comment"># El Motor (Python)</span><br>
-                        Diseño arquitecturas escalables que no se rompen bajo presión. APIs rápidas, lógica compleja y datos seguros.
+                    <p class="docstring">
+                        """<br>
+                        No creo en reinventar la rueda para cada sistema operativo, pero tampoco tolero el rendimiento mediocre.<br>
+                        Mi apuesta: La robustez de Python en el servidor y la versatilidad de Flutter en la pantalla.<br>
+                        """
                     </p>
-                    <p>
-                        <span class="comment"># El Lienzo (Flutter)</span><br>
-                        Una sola base de código, rendimiento nativo a 60fps y control pixel-perfect en iOS y Android.
-                    </p>
+                    
+                    <div class="concept-block">
+                        <p class="concept-title"><span class="comment">// El Motor (Python)</span></p>
+                        <p>Donde ocurren los cálculos pesados. Diseño arquitecturas escalables que procesan datos, gestionan usuarios y aseguran que la lógica de tu negocio sea sólida como una roca.</p>
+                    </div>
+
+                    <div class="concept-block">
+                        <p class="concept-title"><span class="comment">// El Lienzo (Flutter)</span></p>
+                        <p>Una sola base de código, rendimiento nativo a 60fps y un control "píxel-perfect". Tu producto llega al mercado en la mitad de tiempo sin sacrificar calidad visual.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="services-grid">
+            
             <div class="service-card">
-                <div class="icon-box">🐍</div>
-                <h3>Backend Logic</h3>
-                <p>Django, FastAPI & Arquitectura Cloud. Lo que no se ve, pero sostiene todo.</p>
+                <div class="icon-box">
+                    <i class="fa-brands fa-python"></i> </div>
+                <h3>The Core</h3>
+                <p class="service-desc">Arquitecturas invisibles pero vitales. APIs REST/GraphQL y automatización. Si tiene que ser rápido y seguro, es Python.</p>
+                <div class="card-tags">
+                    <span class="tech-tag">#Django</span>
+                    <span class="tech-tag">#FastAPI</span>
+                    <span class="tech-tag">#PostgreSQL</span>
+                </div>
             </div>
 
             <div class="service-card">
-                <div class="icon-box">📱</div>
-                <h3>Flutter Native</h3>
-                <p>Apps fluidas para iOS y Android. Un código, dos ecosistemas, cero compromisos.</p>
+                <div class="icon-box">
+                    <i class="fa-brands fa-flutter"></i> <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <h3>The Interface</h3>
+                <p class="service-desc">Desarrollo móvil inteligente. Apps iOS/Android desde un único código. UI/UX expresiva y animaciones fluidas.</p>
+                <div class="card-tags">
+                    <span class="tech-tag">#Flutter</span>
+                    <span class="tech-tag">#Dart</span>
+                    <span class="tech-tag">#Material</span>
+                </div>
             </div>
 
             <div class="service-card">
-                <div class="icon-box">🔌</div>
-                <h3>API Integration</h3>
-                <p>Conexión total. Integro pasarelas de pago, mapas y hardware IoT con tu app.</p>
+                <div class="icon-box">
+                    <i class="fa-solid fa-network-wired"></i> </div>
+                <h3>The Link</h3>
+                <p class="service-desc">La unión hace la fuerza. Integro tu app con sistemas existentes, pasarelas de pago o hardware IoT.</p>
+                <div class="card-tags">
+                    <span class="tech-tag">#Integration</span>
+                    <span class="tech-tag">#IoT</span>
+                    <span class="tech-tag">#API</span>
+                </div>
             </div>
         </div>
     </section>

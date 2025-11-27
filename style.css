@@ -482,3 +482,50 @@ body.dev-mode p {
     /* Ajustar padding del terminal */
     .terminal-section { padding-bottom: 100px; } /* Espacio para la nav flotante */
 }
+
+/* Corrección Toggle Label */
+.toggle-label {
+    cursor: pointer; /* Hace que aparezca la manita al pasar por el texto */
+}
+
+/* Estilos para los Conceptos (Motor/Lienzo) */
+.concept-block {
+    margin-bottom: 25px;
+    border-left: 2px solid #333;
+    padding-left: 15px;
+}
+.concept-title {
+    margin: 0 0 5px 0;
+    font-family: var(--font-code);
+}
+
+/* Estilos de Iconos FontAwesome */
+.icon-box i {
+    font-size: 2.5rem;
+    background: -webkit-linear-gradient(45deg, var(--accent-python), var(--accent-android));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Estilos para los Tags Técnicos (#Django, etc.) */
+.card-tags {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    color: #888;
+    background: rgba(255,255,255,0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: color 0.3s;
+}
+
+.service-card:hover .tech-tag {
+    color: var(--accent-android);
+    background: rgba(61, 220, 132, 0.1);
+}
