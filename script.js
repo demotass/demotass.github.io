@@ -1,46 +1,38 @@
-/* 1. FUNCIÓN GLOBAL 
-   Esta función debe estar FUERA del DOMContentLoaded para que 
-   el HTML (oninput="...") pueda encontrarla.
-*/
+// 1. FUNCIÓN GLOBAL (Para que funcione el Slider desde HTML)
 function updateSlider(input, layerId) {
     const layer = document.getElementById(layerId);
-    // Verificamos que el elemento existe para evitar errores
     if (layer) {
         const percentage = input.value + "%";
         layer.style.width = percentage;
     }
 }
 
-/* 2. LÓGICA QUE ESPERA AL HTML
-   Todo lo que busca elementos por ID al iniciar debe ir aquí dentro.
-*/
+// 2. LÓGICA DE INICIO
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- SECCIÓN HERO: ANIMACIÓN DE CÓDIGO ---
     const codeBlock = document.getElementById('code-block');
     const heroTitle = document.getElementById('hero-title');
 
-    // Solo ejecutamos si los elementos existen
     if (codeBlock && heroTitle) {
-        // 1. Simular cursor
+        // Simular escritura y compilación
         setTimeout(() => {
-            codeBlock.innerHTML += '<span class="cursor">|</span>';
+            codeBlock.innerHTML += '<span class="cursor">|</span>'; // Cursor parpadeante
         }, 500);
 
-        // 2. Transición "Mágica"
         setTimeout(() => {
-            codeBlock.style.opacity = '0';
+            codeBlock.style.opacity = '0'; // Desvanecer código
             
             setTimeout(() => {
                 codeBlock.style.display = 'none';
                 heroTitle.classList.remove('hidden');
-                heroTitle.classList.add('visible-hero');
+                heroTitle.classList.add('visible-hero'); // Mostrar título
             }, 500);
             
-        }, 3500);
+        }, 3000); // 3 segundos de "escritura"
     }
 
-    // --- SECCIÓN DEV MODE: TOGGLE ---
+    // --- MODO DEV: TOGGLE ---
     const devToggle = document.getElementById('devModeToggle');
     const body = document.body;
 
