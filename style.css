@@ -220,10 +220,10 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
     
     /* 2. AJUSTE DEL MENÚ PARA QUE NO SE CORTE EN MÓVIL */
     .floating-nav { 
-        width: 95%; /* Máximo ancho en móvil */
+        width: 90%; /* Máximo ancho en móvil */
         max-width: 400px; /* Evita que sea enorme en tablets */
         justify-content: center;
-        padding: 10px 15px; 
+        padding: 10px 10px; 
         gap: 20px; /* Menos espacio entre enlaces */
     }
     .nav-link { font-size: 0.8rem; }
