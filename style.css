@@ -1,11 +1,11 @@
+html { 
+    scroll-behavior: smooth;
+}
+
 /* === REGLA MAESTRA (CORRECCIÓN MENU CORTADO) === */
 /* Esto asegura que el padding no aumente el ancho de los elementos */
 *, *::before, *::after {
     box-sizing: border-box;
-}
-
-html { 
-    scroll-behavior: smooth;
 }
 
 :root {
@@ -141,7 +141,6 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
 .comparison-container { position: relative; width: 100%; height: 350px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid #2a303c; }
 .img-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .ui-layer { 
-    /* ¡CAMBIA ESTO POR TU CAPTURA REAL! */
     background-image: url('img/ejemploApp.jpg'); 
     background-size: cover; background-position: center; 
 }
@@ -172,7 +171,22 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
 .command {color: var(--accent-python); margin-right: 10px;}
 
 /* === NAVEGACIÓN === */
-.floating-nav { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: rgba(15, 20, 26, 0.9); backdrop-filter: blur(10px); padding: 10px 25px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); z-index: 1000; display: flex; gap: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+/* === NAVEGACIÓN === */
+.floating-nav { 
+    position: fixed; 
+    bottom: 30px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background: rgba(15, 20, 26, 0.9); 
+    backdrop-filter: blur(10px); 
+    padding: 10px 25px; 
+    border-radius: 50px; 
+    border: 1px solid rgba(255,255,255,0.1); 
+    z-index: 1000; 
+    display: flex; 
+    gap: 20px; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5); 
+}
 .nav-link { color: #a0aab5; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.3s; }
 .nav-link:hover, .nav-link.active, .nav-link.highlight { color: #fff; }
 
@@ -182,10 +196,19 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
     h1 { font-size: 2.5rem; }
     .code-style { font-size: 0.9rem; }
     .mode-toggle { top: 10px; right: 10px; transform: scale(0.9); }
-    .floating-nav { width: 90%; justify-content: space-around; padding: 10px 15px; }
+    
+    /* 2. AJUSTE DEL MENÚ PARA QUE NO SE CORTE EN MÓVIL */
+    .floating-nav { 
+        width: 95%; /* Máximo ancho en móvil */
+        max-width: 400px; /* Evita que sea enorme en tablets */
+        justify-content: center;
+        padding: 10px 15px; 
+        gap: 15px; /* Menos espacio entre enlaces */
+    }
     .nav-link { font-size: 0.8rem; }
+
     .bio-grid-layout { grid-template-columns: 1fr; justify-items: center; }
-    .bio-text-column { order: 1; text-align: center; }
+    .bio-text-column { order: 1; }
     .profile-column { order: 2; margin-top: 30px; width: 250px; }
     .text-blocks-wrapper { grid-template-columns: 1fr; }
 }
