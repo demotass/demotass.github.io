@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const randomSnippet = snippets[Math.floor(Math.random() * snippets.length)];
     
     let i = 0;
-    const speed = 35; // Velocidad de escritura (ms)
+    const speed = 25; // Velocidad de escritura (ms)
 
     function typeWriter() {
         if (i < randomSnippet.length) {
