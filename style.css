@@ -145,7 +145,7 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
     background-size: cover; background-position: center; 
 }
 .code-layer { background-color: #0a0f14; width: 50%; border-right: 2px solid var(--accent-android); overflow: hidden; z-index: 2; }
-.code-content { width: 100vw; padding: 20px; font-family: var(--font-code); color: #a0aab5; font-size: 0.9rem; }
+.code-content { width: 100%; padding: 20px; font-family: var(--font-code); color: #a0aab5; font-size: 0.9rem; }
 .label-badge { position: absolute; bottom: 10px; padding: 4px 8px; background: #000; color: #fff; font-size: 0.7rem; font-family: var(--font-code); border-radius: 4px; }
 .ui-badge { right: 10px; background: var(--accent-ios); }
 .code-badge { left: 10px; background: var(--accent-python); }
@@ -202,8 +202,8 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
         width: 95%; /* Máximo ancho en móvil */
         max-width: 400px; /* Evita que sea enorme en tablets */
         justify-content: center;
-        padding: 10px 15px; 
-        gap: 15px; /* Menos espacio entre enlaces */
+        padding: 10px 10px; 
+        gap: 20px; /* Menos espacio entre enlaces */
     }
     .nav-link { font-size: 0.8rem; }
 
