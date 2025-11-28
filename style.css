@@ -1,3 +1,9 @@
+/* === REGLA MAESTRA (CORRECCIÓN MENU CORTADO) === */
+/* Esto asegura que el padding no aumente el ancho de los elementos */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html { 
     scroll-behavior: smooth;
 }
