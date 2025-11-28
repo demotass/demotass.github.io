@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- 1. Google Analytics (Se mantiene arriba para máxima precisión) -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-744HKL34P9"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-744HKL34P9');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-744HKL34P9');
     </script>
 
+    <!-- Metadatos Básicos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Desarrollador experto en Python y Flutter. Creo aplicaciones móviles nativas para iOS y Android con backend robusto. Soluciones de software de alto rendimiento.">
     <title>Demotass | Python & Flutter Architect</title>
     
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 2. VELOCIDAD: Preconexión a servidores de fuentes (Acelera la descarga inicial) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
+    <!-- 3. TU CSS: Con '?v=2.0' para obligar a ver el diseño nuevo -->
+    <link rel="stylesheet" href="style.css?v=2.0">
+
+    <!-- 4. FUENTES: Google Fonts (Fira Code & Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    
+    <!-- 5. ICONOS: FontAwesome Optimizado (No bloquea la carga visual) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <!-- Respaldo para navegadores antiguos sin JS -->
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Favicon -->
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -42,7 +55,11 @@
     <!-- HERO -->
     <header class="hero-section">
         <div class="content-wrapper">
-            <div id="code-block" class="code-style"></div>
+            <div id="code-block" class="code-style">
+                <span class="prompt">&gt; Initializing Demotass Core...</span>
+                <br>
+                <span class="cursor">|</span>
+            </div>
             <div id="hero-title" class="hidden">
                 <h1 class="glitch">DEMOTASS</h1>
                 <p class="subtitle">Eficiencia algorítmica. Belleza multiplataforma.</p>
@@ -212,6 +229,6 @@
         </footer>
     </section>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
