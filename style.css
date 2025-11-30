@@ -101,7 +101,7 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
 /* AHORA: Al pasar el ratón, se OCULTAN (se para el efecto) */
 .glitch-container:hover .glitch-1, 
 .glitch-container:hover .glitch-2 { 
-    opacity: 0; 
+    opacity: 1; 
 }
 /* He aumentado los valores de 'translate' de 2px a 10px para que vibre más fuerte */
 @keyframes glitch-anim-1 { 
