@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const randomSnippet = snippets[Math.floor(Math.random() * snippets.length)];
-    
     let i = 0;
     const speed = 25; // Velocidad de escritura (ms)
 
@@ -95,5 +94,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 body.classList.remove('dev-mode');
             }
         });
+    }
+    
+    // --- CONTROL VISIBILIDAD DEL MENÚ (INTERSECTION OBSERVER) ---
+    const heroSection = document.querySelector('.hero-section');
+    const nav = document.querySelector('.floating-nav');
+
+    if (heroSection && nav) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    // Si el Hero YA NO se ve, mostramos el menú
+                    nav.classList.add('visible');
+                } else {
+                    // Si el Hero SE VE, ocultamos el menú
+                    nav.classList.remove('visible');
+                }
+            });
+        }, {
+            threshold: 0.1 // Se activa cuando queda un 10% del hero visible o menos
+        });
+
+        observer.observe(heroSection);
     }
 });
