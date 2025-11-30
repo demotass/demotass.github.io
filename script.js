@@ -1,3 +1,15 @@
+// --- LANGUAGE REDIRECTION ---
+(function() {
+    const userLang = navigator.language || navigator.userLanguage;
+    const isSpanish = userLang.toLowerCase().startsWith('es');
+    const isAlreadyOnEnglishPage = window.location.pathname.endsWith('index_en.html');
+
+    // If browser is not Spanish and we are not already on the English page, redirect.
+    if (!isSpanish && !isAlreadyOnEnglishPage) {
+        window.location.href = 'index_en.html';
+    }
+})();
+
 // 1. FUNCIÓN GLOBAL (Para que funcione el Slider desde HTML)
 function updateSlider(input, layerId) {
     const layer = document.getElementById(layerId);

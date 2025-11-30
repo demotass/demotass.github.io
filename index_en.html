@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 1. Google Analytics (Se mantiene arriba para maxima precision) -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-744HKL34P9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-744HKL34P9');
+    </script>
+
+    <!-- Metadatos Basicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert Python and Flutter developer. I build native mobile apps for iOS and Android with a robust backend. High-performance software solutions.">
+    <title>Demotass | Python & Flutter Architect</title>
+    
+    <!-- 2. VELOCIDAD: Preconexion a servidores de fuentes (Acelera la descarga inicial) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- 3. TU CSS: Con '?v=2.0' para obligar a ver el diseno nuevo -->
+    <link rel="stylesheet" href="style.css?v=2.0">
+
+    <!-- 4. FUENTES: Google Fonts (Fira Code & Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    
+    <!-- 5. ICONOS: FontAwesome Optimizado (No bloquea la carga visual) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <!-- Respaldo para navegadores antiguos sin JS -->
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <nav class="floating-nav">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#portfolio" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link highlight">Contact</a>
+    </nav>
+
+    <div class="mode-toggle">
+        <label for="devModeToggle" class="toggle-label">VIEW_SOURCE: </label>
+        <label class="switch">
+            <input type="checkbox" id="devModeToggle">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero-section">
+        <div class="content-wrapper">
+            <div id="code-block" class="code-style">
+                <span class="prompt">&gt; Initializing Demotass Core...</span>
+                <br>
+                <span class="cursor">|</span>
+            </div>
+            <div id="hero-title" class="hidden">
+                <h1 class="glitch">DEMOTASS</h1>
+                <p class="subtitle">Algorithmic efficiency. Cross-platform engineering.</p>
+                <a href="#contact" class="cta-button">def start_project():</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCION ABOUT (RE-ESTRUCTURADA PARA FULL WIDTH) -->
+    <section id="about" class="about-section">
+        <div class="bio-container">
+            <h2 class="section-title"><span class="class-def">class</span> Demotass(<span class="parent-class">FullStackDev</span>):</h2>
+            
+            <!-- PARTE SUPERIOR: CITA Y FOTO (Lado a Lado) -->
+            <div class="bio-grid-layout">
+                <div class="bio-text-column">
+                    <p class="docstring main-quote">
+                        """<br>
+                        Software engineering is balance: robust server logic supporting a fluid interface.<br>
+                        I use industry-leading tools to build systems that last and apps people love.<br>
+                        """
+                    </p>
+                </div>
+
+                <div class="profile-column">
+                    <div class="glitch-container">
+                        <div class="glitch-img" style="background-image: url('img/profile.jpg');"></div>
+                        <div class="glitch-img glitch-1" style="background-image: url('img/profile.jpg');"></div>
+                        <div class="glitch-img glitch-2" style="background-image: url('img/profile.jpg');"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARTE CENTRAL: DIAGRAMA (Ancho Completo) -->
+            <div class="live-data-diagram">
+                <div class="node-wrapper">
+                    <div class="server-cluster">
+                        <i class="fa-brands fa-python node-icon-large python-glow"></i>
+                        <div class="mini-node n1"></div>
+                        <div class="mini-node n2"></div>
+                    </div>
+                    <span class="node-label">Backend</span>
+                </div>
+
+                <div class="data-pipeline">
+                    <div class="pipe-line"></div>
+                    <div class="data-packet p1"></div>
+                    <div class="data-packet p2"></div>
+                    <span class="pipe-label">JSON STREAM</span>
+                </div>
+
+                <div class="node-wrapper">
+                    <div class="device-cluster">
+                        <i class="fa-solid fa-mobile-screen-button node-icon-large flutter-glow"></i>
+                        <div class="ui-element u1"></div>
+                    </div>
+                    <span class="node-label">Mobile</span>
+                </div>
+            </div>
+
+            <!-- PARTE INFERIOR: TEXTOS (Ancho Completo en 2 columnas) -->
+            <div class="text-blocks-wrapper">
+                <div class="concept-block">
+                    <p class="concept-title"><span class="comment">// The Engine (Python)</span></p>
+                    <p>Where the heavy calculations happen. I design scalable architectures that process data, manage users, and keep your business logic rock solid.</p>
+                </div>
+
+                <div class="concept-block">
+                    <p class="concept-title"><span class="comment">// The Canvas (Flutter)</span></p>
+                    <p>One codebase, native performance, and pixel-perfect control. Your product reaches the market in half the time without losing visual quality.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SERVICIOS (Ancho Completo - 3 Columnas) -->
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-box"><i class="fa-brands fa-python"></i></div>
+                <h3>The Core</h3>
+                <p class="service-desc">Invisible but vital architectures. REST/GraphQL APIs and automation with Python.</p>
+                <div class="card-tags"><span class="tech-tag">#Django</span><span class="tech-tag">#FastAPI</span></div>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <h3>The Interface</h3>
+                <p class="service-desc">iOS/Android apps from a single codebase with Flutter.</p>
+                <div class="card-tags"><span class="tech-tag">#Flutter</span><span class="tech-tag">#Dart</span></div>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><i class="fa-solid fa-network-wired"></i></div>
+                <h3>The Link</h3>
+                <p class="service-desc">Integration with existing systems, payments, and IoT.</p>
+                <div class="card-tags"><span class="tech-tag">#Integration</span><span class="tech-tag">#API</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTAFOLIO -->
+    <section id="portfolio" class="portfolio-section">
+        <h2 class="section-title">&lt;Projects /&gt;</h2>
+        <div class="project-card">
+            <div class="project-info">
+                <h3>01. Enterprise Analytics</h3>
+                <p>From raw SQL data to interactive visualization.</p>
+                <div class="tech-stack"><span class="tag python">Python</span><span class="tag flutter">Flutter</span></div>
+            </div>
+            <div class="comparison-container">
+                <div class="img-layer ui-layer"><div class="label-badge ui-badge">Flutter UI</div></div>
+                <div class="img-layer code-layer" id="code-layer-1">
+                    <div class="code-content">
+                        <pre>
+{
+  "status": "success",
+  "data": {
+    "revenue": 45000,
+    "growth": "+15%",
+    "users": [ ... ]
+  }
+}
+                        </pre>
+                    </div>
+                    <div class="label-badge code-badge">Backend JSON</div>
+                </div>
+                <input type="range" min="0" max="100" value="50" class="slider-range" oninput="updateSlider(this, 'code-layer-1')">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="terminal-section">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                <span class="terminal-title">bash -- contact.sh</span>
+            </div>
+            <div class="terminal-body">
+                <p class="system-msg">Initializing secure connection...</p>
+                <p class="system-msg">Connection established.</p>
+                <br>
+                <form id="terminal-form" action="https://formspree.io/f/mpwgrqql" method="POST">
+                    <div class="input-line">
+                        <span class="prompt">root@client:~#</span>
+                        <span class="command">set_name</span>
+                        <input type="text" class="terminal-input" placeholder="Your Name or Company" required autocomplete="off">
+                    </div>
+
+                    <div class="input-line">
+                        <span class="prompt">root@client:~#</span>
+                        <span class="command">set_email </span>
+                        <input type="email" class="terminal-input" placeholder="your@email.com" required autocomplete="off">
+                    </div>
+
+                    <div class="input-line">
+                        <span class="prompt">root@client:~#</span>
+                        <span class="command">input_query</span>
+                        <textarea class="terminal-input textarea" placeholder="Describe your project..." required></textarea>
+                    </div>
+                    <div class="action-line">
+                        <button type="submit" class="execute-btn">> EXECUTE()</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer class="main-footer">
+            <p>&copy; 2025 Demotass. Built with Python & Flutter Logic.</p>
+        </footer>
+    </section>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
+
