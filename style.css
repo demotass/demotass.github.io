@@ -233,10 +233,10 @@ input:checked + .slider:before { transform: translateX(26px); background-color: 
     .bio-text-column { order: 1; }
     .profile-column { order: 2; margin-top: 30px; width: 250px; }
     .text-blocks-wrapper { grid-template-columns: 1fr; }
-    
+
     /* === SOLUCIÓN TÍTULO GIGANTE === */
     .section-title {
-        font-size: 1.1rem; /* Reducción drástica para móvil */
+        font-size: 1.6rem; /* Reducción drástica para móvil */
         word-break: break-word; /* Romper palabra si es necesario */
         white-space: normal; /* Asegurar que no fuerce una línea */
         width: 100%;
