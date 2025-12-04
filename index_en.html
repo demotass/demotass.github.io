@@ -36,7 +36,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- 3. TU CSS: Con '?v=2.0' para obligar a ver el diseno nuevo -->
-    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="style.css?v=2.1">
 
     <!-- 4. FUENTES: Google Fonts (Fira Code & Inter) -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;800&display=swap" rel="stylesheet">
@@ -252,7 +252,7 @@ ORDER BY [UpdatedAt] DESC;
                 <p class="system-msg">Connection established.</p>
                 <br>
                 <form id="terminal-form" action="https://formspree.io/f/mpwgrqql" method="POST">
-                    <div class="honeypot">
+                    <div class="honeypot" aria-hidden="true">
                         <label for="bot-field">Leave this field empty</label>
                         <input type="text" id="bot-field" name="_gotcha" tabindex="-1" autocomplete="off">
                     </div>
