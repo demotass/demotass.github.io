@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Google Analytics (solo tras consentimiento) -->
+    <script>
+      const GA_ID = 'G-744HKL34P9';
+      let gtagLoaded = false;
+
+      function loadAnalytics() {
+        if (gtagLoaded || !GA_ID) return;
+        const gaScript = document.createElement('script');
+        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA_ID, { anonymize_ip: true });
+        gtagLoaded = true;
+      }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad | Demotass</title>
+    <meta name="description" content="Política de privacidad y aviso legal de demotass.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+</head>
+<body class="legal-page">
+
+    <div id="cookie-banner" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <p class="cookie-text">Usamos cookies de analítica para mejorar la experiencia. Solo se activan si aceptas.</p>
+            <div class="cookie-actions">
+                <button id="accept-cookies" class="cookie-btn accept">Aceptar</button>
+                <button id="reject-cookies" class="cookie-btn reject">Rechazar</button>
+                <a class="cookie-link" href="#cookies">Ver política</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="legal-top-nav">
+        <a class="legal-home" href="index.html">← Volver al sitio</a>
+        <span class="legal-home">Demotass</span>
+    </div>
+
+    <main class="legal-wrapper">
+        <h1 class="legal-title">Política de Privacidad</h1>
+        <p class="legal-subtitle">Información sobre cómo tratamos tus datos en demotass.com.</p>
+        <p class="legal-updated">Última actualización: 10/02/2025</p>
+
+        <div class="legal-card" id="responsable">
+            <h3>1. Responsable</h3>
+            <p>Demotass (portfolio personal). Contacto: demotass.dev@gmail.com.</p>
+            <p>Dominio: demotass.com.</p>
+        </div>
+
+        <div class="legal-card" id="datos">
+            <h3>2. Datos que se recogen</h3>
+            <ul>
+                <li><strong>Formulario de contacto:</strong> nombre, email y mensaje (obligatorios). Se procesan a través de Formspree como encargado del tratamiento.</li>
+                <li><strong>Analítica web:</strong> Google Analytics solo se carga tras tu consentimiento. Se usa IP anonimizada.</li>
+                <li><strong>Logs técnicos:</strong> se pueden registrar datos técnicos mínimos para seguridad (IP, agente, fecha/hora).</li>
+            </ul>
+        </div>
+
+        <div class="legal-card" id="finalidad">
+            <h3>3. Finalidad</h3>
+            <p>Responder a consultas o solicitudes enviadas por el formulario y mejorar el rendimiento y seguridad del sitio.</p>
+        </div>
+
+        <div class="legal-card" id="legitimacion">
+            <h3>4. Base jurídica</h3>
+            <ul>
+                <li><strong>Consentimiento:</strong> envío de formularios y uso de cookies/analytics.</li>
+                <li><strong>Interés legítimo:</strong> seguridad y prevención de abuso (anti-spam, registros técnicos).</li>
+            </ul>
+        </div>
+
+        <div class="legal-card" id="conservacion">
+            <h3>5. Conservación</h3>
+            <p>Los datos del formulario se conservan mientras se gestiona tu solicitud y, si procede, durante los plazos legales aplicables. Los datos de analítica se retienen según la configuración de Google Analytics, con IP anonimizada.</p>
+        </div>
+
+        <div class="legal-card" id="destinatarios">
+            <h3>6. Destinatarios</h3>
+            <ul>
+                <li>Formspree (encargado de tratamiento del formulario).</li>
+                <li>Google LLC (analítica), solo si has aceptado las cookies.</li>
+                <li>No se prevén cesiones adicionales salvo obligación legal.</li>
+            </ul>
+        </div>
+
+        <div class="legal-card" id="derechos">
+            <h3>7. Derechos</h3>
+            <p>Puedes ejercer acceso, rectificación, supresión, oposición, limitación y portabilidad escribiendo a demotass.dev@gmail.com. Tienes derecho a retirar el consentimiento en cualquier momento y a reclamar ante la autoridad de control competente.</p>
+        </div>
+
+        <div class="legal-card" id="cookies">
+            <h3>8. Cookies</h3>
+            <ul>
+                <li>Solo se carga Google Analytics si aceptas el banner de consentimiento.</li>
+                <li>Las cookies analíticas se usan para entender uso del sitio (páginas visitadas, eventos básicos) con IP anonimizada.</li>
+                <li>Puedes borrar o bloquear cookies desde la configuración de tu navegador.</li>
+            </ul>
+        </div>
+
+        <div class="legal-card" id="seguridad">
+            <h3>9. Seguridad</h3>
+            <p>Se aplican medidas razonables para proteger la información (formularios con honeypot/anti-spam, conexiones TLS, acceso restringido a proveedores).</p>
+        </div>
+
+        <div class="legal-card" id="aviso-legal">
+            <h3>10. Aviso Legal</h3>
+            <p>El contenido de este sitio es informativo y orientado a servicios profesionales de desarrollo software. No se asume responsabilidad por el uso indebido de la información. Queda prohibida la reproducción no autorizada de los contenidos.</p>
+        </div>
+
+        <a class="legal-back" href="index.html#contact">Volver a contactar</a>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

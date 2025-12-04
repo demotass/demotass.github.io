@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics (only after consent) -->
+    <script>
+      const GA_ID = 'G-744HKL34P9';
+      let gtagLoaded = false;
+
+      function loadAnalytics() {
+        if (gtagLoaded || !GA_ID) return;
+        const gaScript = document.createElement('script');
+        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA_ID, { anonymize_ip: true });
+        gtagLoaded = true;
+      }
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Demotass</title>
+    <meta name="description" content="Privacy Policy and Legal Notice for demotass.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+</head>
+<body class="legal-page">
+
+    <div id="cookie-banner" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <p class="cookie-text">We use analytics cookies to improve the experience. They only run if you accept.</p>
+            <div class="cookie-actions">
+                <button id="accept-cookies" class="cookie-btn accept">Accept</button>
+                <button id="reject-cookies" class="cookie-btn reject">Reject</button>
+                <a class="cookie-link" href="#cookies">See policy</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="legal-top-nav">
+        <a class="legal-home" href="index_en.html">← Back to site</a>
+        <span class="legal-home">Demotass</span>
+    </div>
+
+    <main class="legal-wrapper">
+        <h1 class="legal-title">Privacy Policy</h1>
+        <p class="legal-subtitle">How we handle your data on demotass.com.</p>
+        <p class="legal-updated">Last update: 12/04/2025</p>
+
+        <div class="legal-card" id="controller">
+            <h3>1. Controller</h3>
+            <p>Demotass (personal portfolio). Contact: demotass.dev@gmail.com.</p>
+            <p>Domain: demotass.com.</p>
+        </div>
+
+        <div class="legal-card" id="data">
+            <h3>2. Data collected</h3>
+            <ul>
+                <li><strong>Contact form:</strong> name, email, and message (required). Processed via Formspree as processor.</li>
+                <li><strong>Web analytics:</strong> Google Analytics only loads after consent. IP is anonymized.</li>
+                <li><strong>Technical logs:</strong> minimal technical data may be logged for security (IP, user agent, timestamp).</li>
+            </ul>
+        </div>
+
+        <div class="legal-card" id="purpose">
+            <h3>3. Purpose</h3>
+            <p>To reply to enquiries submitted via the form and to improve site performance and security.</p>
+        </div>
+
+        <div class="legal-card" id="legal-basis">
+            <h3>4. Legal basis</h3>
+            <ul>
+                <li><strong>Consent:</strong> form submissions and cookies/analytics.</li>
+                <li><strong>Legitimate interest:</strong> security and abuse prevention (anti-spam, technical logs).</li>
+            </ul>
+        </div>
+
+        <div class="legal-card" id="retention">
+            <h3>5. Retention</h3>
+            <p>Form data is kept while handling your request and, if applicable, for legal retention periods. Analytics data is retained per Google Analytics settings with IP anonymization.</p>
+        </div>
+
+        <div class="legal-card" id="recipients">
+            <h3>6. Recipients</h3>
+            <ul>
+                <li>Formspree (processor for the form).</li>
+                <li>Google LLC (analytics), only if you accepted cookies.</li>
+                <li>No further disclosures are planned unless legally required.</li>
+            </ul>
+        </div>
+
+        <div class="legal-card" id="rights">
+            <h3>7. Your rights</h3>
+            <p>You may exercise access, rectification, erasure, objection, restriction, and portability by emailing demotass.dev@gmail.com. You may withdraw consent at any time and file a complaint with your data protection authority.</p>
+        </div>
+
+        <div class="legal-card" id="cookies">
+            <h3>8. Cookies</h3>
+            <ul>
+                <li>Google Analytics only loads if you accept the consent banner.</li>
+                <li>Analytics cookies are used to understand site usage (visited pages, basic events) with anonymized IP.</li>
+                <li>You can clear or block cookies in your browser settings.</li>
+            </ul>
+        </div>
+
+        <div class="legal-card" id="security">
+            <h3>9. Security</h3>
+            <p>Reasonable measures are applied to protect information (honeypot/anti-spam on forms, TLS, limited provider access).</p>
+        </div>
+
+        <div class="legal-card" id="legal-notice">
+            <h3>10. Legal Notice</h3>
+            <p>The content of this site is informational and relates to professional software development services. No liability is assumed for misuse of the information. Reproduction of content without authorization is prohibited.</p>
+        </div>
+
+        <a class="legal-back" href="index_en.html#contact">Back to contact</a>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

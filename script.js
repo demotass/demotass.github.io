@@ -3,9 +3,11 @@
     const userLang = navigator.language || navigator.userLanguage;
     const isSpanish = userLang.toLowerCase().startsWith('es');
     const isAlreadyOnEnglishPage = window.location.pathname.endsWith('index_en.html');
+    const path = window.location.pathname.toLowerCase();
+    const isPolicyPage = path.includes('privacidad') || path.includes('privacy');
 
-    // If browser is not Spanish and we are not already on the English page, redirect.
-    if (!isSpanish && !isAlreadyOnEnglishPage) {
+    // If browser is not Spanish and we are not already on the English page or legal pages, redirect.
+    if (!isSpanish && !isAlreadyOnEnglishPage && !isPolicyPage) {
         window.location.href = 'index_en.html';
     }
 })();
@@ -128,5 +130,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         observer.observe(heroSection);
+    }
+
+    // --- CONSENTIMIENTO COOKIES / ANALYTICS ---
+    const consentKey = 'demotass_cookie_consent';
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const rejectBtn = document.getElementById('reject-cookies');
+
+    function hideBanner() {
+        if (banner) banner.classList.add('hidden');
+    }
+
+    function showBanner() {
+        if (banner) banner.classList.remove('hidden');
+    }
+
+    function persistConsent(value) {
+        try { localStorage.setItem(consentKey, value); } catch (e) { /* ignore storage errors */ }
+    }
+
+    function applyConsent(value) {
+        if (value === 'accepted') {
+            loadAnalytics();
+        }
+        hideBanner();
+    }
+
+    const storedConsent = (() => {
+        try { return localStorage.getItem(consentKey); } catch (e) { return null; }
+    })();
+
+    if (!storedConsent) {
+        showBanner();
+    } else {
+        applyConsent(storedConsent);
+    }
+
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => {
+            persistConsent('accepted');
+            applyConsent('accepted');
+        });
+    }
+
+    if (rejectBtn) {
+        rejectBtn.addEventListener('click', () => {
+            persistConsent('rejected');
+            applyConsent('rejected');
+        });
     }
 });

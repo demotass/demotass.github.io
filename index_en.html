@@ -1,14 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 1. Google Analytics (Se mantiene arriba para maxima precision) -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-744HKL34P9"></script>
+    <!-- 1. Google Analytics (Loaded only after consent) -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-744HKL34P9');
+      const GA_ID = 'G-744HKL34P9';
+      let gtagLoaded = false;
+
+      function loadAnalytics() {
+        if (gtagLoaded || !GA_ID) return;
+        const gaScript = document.createElement('script');
+        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA_ID, { anonymize_ip: true });
+        gtagLoaded = true;
+      }
     </script>
 
     <!-- Metadatos Basicos -->
@@ -46,6 +57,17 @@
         <a href="#portfolio" class="nav-link">Projects</a>
         <a href="#contact" class="nav-link highlight">Contact</a>
     </nav>
+
+    <div id="cookie-banner" class="cookie-banner hidden">
+        <div class="cookie-content">
+            <p class="cookie-text">We use analytics cookies to improve the experience. They only run if you accept.</p>
+            <div class="cookie-actions">
+                <button id="accept-cookies" class="cookie-btn accept">Accept</button>
+                <button id="reject-cookies" class="cookie-btn reject">Reject</button>
+                <a class="cookie-link" href="privacy.html#cookies">See policy</a>
+            </div>
+        </div>
+    </div>
 
     <div class="mode-toggle">
         <label for="devModeToggle" class="toggle-label">VIEW_SOURCE: </label>
@@ -166,28 +188,54 @@
         <h2 class="section-title">&lt;Projects /&gt;</h2>
         <div class="project-card">
             <div class="project-info">
-                <h3>01. Enterprise Analytics</h3>
-                <p>From raw SQL data to interactive visualization.</p>
-                <div class="tech-stack"><span class="tag python">Python</span><span class="tag flutter">Flutter</span></div>
+                <h3>01. CheckCured</h3>
+                <p>Data capture, SQL registration, visualization, and certified outputs.</p>
+                <div class="tech-stack"><span class="tag python">Python</span><span class="tag flutter">SQL Server</span></div>
             </div>
             <div class="comparison-container">
-                <div class="img-layer ui-layer"><div class="label-badge ui-badge">Flutter UI</div></div>
+                <div class="img-layer ui-layer"><div class="label-badge ui-badge">Tkinter UI</div></div>
                 <div class="img-layer code-layer" id="code-layer-1">
                     <div class="code-content">
-                        <pre>
-{
-  "status": "success",
-  "data": {
-    "revenue": 45000,
-    "growth": "+15%",
-    "users": [ ... ]
-  }
-}
-                        </pre>
+                        <pre>SELECT TOP 5 [Customer], [Status], [RiskScore]
+FROM dbo.Payouts
+WHERE [Status] <> 'Cleared'
+ORDER BY [UpdatedAt] DESC;
+-- Normalized and exposed via API</pre>
                     </div>
-                    <div class="label-badge code-badge">Backend JSON</div>
+                    <div class="label-badge code-badge">SQL Backend</div>
                 </div>
                 <input type="range" min="0" max="100" value="50" class="slider-range" oninput="updateSlider(this, 'code-layer-1')">
+            </div>
+            <div class="project-cta">
+                <a class="project-link" href="#contact">Contact me for a demo</a>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-info">
+                <h3>02. Serenity Quotes</h3>
+                <p>Cross-platform motivational quotes app with audio and themes.</p>
+                <div class="tech-stack"><span class="tag flutter">Flutter</span><span class="tag python">Python</span></div>
+            </div>
+            <div class="comparison-container">
+                <div class="img-layer ui-layer" style="background-image:url('img/proyectos/confianza.jpg'); background-size:cover; background-position:center;">
+                    <div class="label-badge ui-badge">Mobile UI</div>
+                </div>
+                <div class="img-layer code-layer" id="code-layer-2">
+                    <div class="code-content">
+                        <pre>{
+  "platform": "Flutter",
+  "targets": ["iOS", "Android", "Web"],
+  "experience": "Motivational quotes with audio and favorites"
+}</pre>
+                    </div>
+                    <div class="label-badge code-badge">Multiplatform</div>
+                </div>
+                <input type="range" min="0" max="100" value="50" class="slider-range" oninput="updateSlider(this, 'code-layer-2')">
+            </div>
+            <div class="project-cta">
+                <a class="project-link" href="https://frases.demotass.com/" target="_blank" rel="noopener">View site</a>
+                <span class="divider">|</span>
+                <a class="project-link" href="#contact">Contact</a>
             </div>
         </div>
     </section>
@@ -204,23 +252,32 @@
                 <p class="system-msg">Connection established.</p>
                 <br>
                 <form id="terminal-form" action="https://formspree.io/f/mpwgrqql" method="POST">
+                    <div class="honeypot">
+                        <label for="bot-field">Leave this field empty</label>
+                        <input type="text" id="bot-field" name="_gotcha" tabindex="-1" autocomplete="off">
+                    </div>
                     <div class="input-line">
                         <span class="prompt">root@client:~#</span>
                         <span class="command">set_name</span>
-                        <input type="text" class="terminal-input" placeholder="Your Name or Company" required autocomplete="off">
+                        <input type="text" class="terminal-input" name="name" placeholder="Your Name or Company" required autocomplete="off">
                     </div>
 
                     <div class="input-line">
                         <span class="prompt">root@client:~#</span>
                         <span class="command">set_email </span>
-                        <input type="email" class="terminal-input" placeholder="your@email.com" required autocomplete="off">
+                        <input type="email" class="terminal-input" name="email" placeholder="your@email.com" required autocomplete="off">
                     </div>
 
                     <div class="input-line">
                         <span class="prompt">root@client:~#</span>
                         <span class="command">input_query</span>
-                        <textarea class="terminal-input textarea" placeholder="Describe your project..." required></textarea>
+                        <textarea class="terminal-input textarea" name="message" placeholder="Describe your project..." required></textarea>
                     </div>
+                    <div class="input-line checkbox-line">
+                        <input type="checkbox" id="privacy-consent" name="privacy_consent" required>
+                        <label for="privacy-consent">I have read and accept the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</label>
+                    </div>
+                    <p class="form-notice">Data is used only to reply to your request. You can exercise your rights at privacy@demotass.com.</p>
                     <div class="action-line">
                         <button type="submit" class="execute-btn">> EXECUTE()</button>
                     </div>
@@ -229,6 +286,11 @@
         </div>
         <footer class="main-footer">
             <p>&copy; 2025 Demotass. Built with Python & Flutter Logic.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <span class="divider">|</span>
+                <a href="privacy.html#legal-notice">Legal Notice</a>
+            </div>
         </footer>
     </section>
 
